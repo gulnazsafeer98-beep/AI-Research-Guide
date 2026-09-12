@@ -111,7 +111,7 @@ def main():
         5. **Step-by-Step Research Methodology / Guidance**: Actionable roadmap from literature review to evaluation and final write-up.
         """
 
-        with st.spinner("Synthesizing research structure via Groq (Llama 3)..."):
+        with st.spinner("Synthesizing research structure via Groq (openai/gpt-oss-120b)..."):
             try:
                 chat_completion = client.chat.completions.create(
                     messages=[
