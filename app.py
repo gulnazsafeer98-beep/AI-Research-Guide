@@ -38,13 +38,7 @@ def main():
     with st.sidebar:
         st.header("⚙️ Configuration")
         
-        # API Key handling: checks Streamlit secrets first, then falls back to text input or environment
-        api_key_env = os.environ.get("GROQ_API_KEY", "")
-        if "groq" in st.secrets and "GROQ_API_KEY" in st.secrets["groq"]:
-            api_key = st.secrets["groq"]["GROQ_API_KEY"]
-        else:
-            api_key = st.text_input("Enter Groq API Key", value=api_key_env, type="password")
-            st.markdown("[Get a free Groq API key](https://console.groq.com)")
+        api_key = st.secrets["GROQ_API_KEY"]
 
         st.divider()
         
